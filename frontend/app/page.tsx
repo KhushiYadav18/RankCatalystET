@@ -17,19 +17,19 @@ const clients: TeamMember[] = [
     name: "Kshitij Sharma",
     role: "Client",
     linkedin: "https://www.linkedin.com/in/kshitij-sharma-6973006a/?originalSubdomain=no",
-    image: "/placeholder-avatar.png",
+    image: "/team/clients/kshitij-sharma.jpg",
   },
   {
     name: "Ramkumar Rajendran",
     role: "Client",
     linkedin: "https://www.linkedin.com/in/ramkumar-rajendran-06b61618/?originalSubdomain=in",
-    image: "/placeholder-avatar.png",
+    image: "/team/clients/ramkumar-rajendran.jpg",
   },
   {
     name: "Aditya Rajmane",
     role: "Client",
     linkedin: "https://www.linkedin.com/in/adityarajmane/",
-    image: "/placeholder-avatar.png",
+    image: "/team/clients/aditya-rajmane.jpg",
   },
 ];
 
@@ -38,25 +38,25 @@ const developers: TeamMember[] = [
     name: "Kaushik Mandal",
     role: "Developer",
     linkedin: "https://www.linkedin.com/in/kaushik-mandal-6562a5294/",
-    image: "/placeholder-avatar.png",
+    image: "/team/developers/kaushik-mandal.jpeg",
   },
   {
     name: "Khushi Yadav",
     role: "Developer",
     linkedin: "https://www.linkedin.com/in/khushi-yadav-0275b6293/",
-    image: "/placeholder-avatar.png",
+    image: "/team/developers/khushi-yadav.jpg",
   },
   {
     name: "Ashwani Dubey",
     role: "Developer",
     linkedin: "https://www.linkedin.com/in/ashwani-dubey-3b2a81258/",
-    image: "/placeholder-avatar.png",
+    image: "/team/developers/ashwani-dubey.jpg",
   },
   {
     name: "Aman Raj",
     role: "Developer",
     linkedin: "https://www.linkedin.com/in/aman-raj-328825280/",
-    image: "/placeholder-avatar.png",
+    image: "/team/developers/aman-raj.jpg",
   },
 ];
 
