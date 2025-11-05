@@ -35,26 +35,52 @@ OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 OPENROUTER_MODEL = "openai/gpt-4o-mini"
 
 # Django Settings
-SECRET_KEY = "django-insecure-rankcatalyst-dev-key-change-in-production-2024"
-DEBUG = True
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+# Read from environment variables for production, fallback to defaults for development
+SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-rankcatalyst-dev-key-change-in-production-2024")
+DEBUG = os.getenv("DEBUG", "True").lower() == "true"
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 
 # Site Info for OpenRouter
-SITE_URL = "http://localhost:3000"  # Frontend URL
-SITE_NAME = "RankCatalyst"
+SITE_URL = os.getenv("SITE_URL", "http://localhost:3000")  # Frontend URL
+SITE_NAME = os.getenv("SITE_NAME", "RankCatalyst")
 
 # Database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# Use PostgreSQL in production (via DATABASE_URL), SQLite in development
+DATABASE_URL = os.getenv("DATABASE_URL")
+if DATABASE_URL:
+    # Parse DATABASE_URL for production (format: postgresql://user:pass@host:port/dbname)
+    import re
+    db_match = re.match(r'postgresql://([^:]+):([^@]+)@([^:]+):(\d+)/(.+)', DATABASE_URL)
+    if db_match:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql',
+                'NAME': db_match.group(5),
+                'USER': db_match.group(1),
+                'PASSWORD': db_match.group(2),
+                'HOST': db_match.group(3),
+                'PORT': db_match.group(4),
+            }
+        }
+    else:
+        # Fallback to SQLite if DATABASE_URL parsing fails
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+        }
+else:
+    # Development: Use SQLite
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
 
 # CORS Settings
-CORS_ALLOW_ALL_ORIGINS = True  # Dev only - change in production
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+# In production, use specific origins; in dev, allow all
+CORS_ALLOW_ALL_ORIGINS = os.getenv("CORS_ALLOW_ALL_ORIGINS", str(DEBUG)).lower() == "true"
+CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",")
 
