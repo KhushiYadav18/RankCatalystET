@@ -14,42 +14,48 @@ interface TeamMember {
 
 const clients: TeamMember[] = [
   {
-    name: "Client One",
+    name: "Kshitij Sharma",
     role: "Client",
-    linkedin: "https://linkedin.com/in/clientone",
+    linkedin: "https://www.linkedin.com/in/kshitij-sharma-6973006a/?originalSubdomain=no",
     image: "/placeholder-avatar.png",
   },
   {
-    name: "Client Two",
+    name: "Ramkumar Rajendran",
     role: "Client",
-    linkedin: "https://linkedin.com/in/clienttwo",
+    linkedin: "https://www.linkedin.com/in/ramkumar-rajendran-06b61618/?originalSubdomain=in",
+    image: "/placeholder-avatar.png",
+  },
+  {
+    name: "Aditya Rajmane",
+    role: "Client",
+    linkedin: "https://www.linkedin.com/in/adityarajmane/",
     image: "/placeholder-avatar.png",
   },
 ];
 
 const developers: TeamMember[] = [
   {
-    name: "Developer One",
+    name: "Kaushik Mandal",
     role: "Developer",
-    linkedin: "https://linkedin.com/in/developerone",
+    linkedin: "https://www.linkedin.com/in/kaushik-mandal-6562a5294/",
     image: "/placeholder-avatar.png",
   },
   {
-    name: "Developer Two",
+    name: "Khushi Yadav",
     role: "Developer",
-    linkedin: "https://linkedin.com/in/developertwo",
+    linkedin: "https://www.linkedin.com/in/khushi-yadav-0275b6293/",
     image: "/placeholder-avatar.png",
   },
   {
-    name: "Developer Three",
+    name: "Ashwani Dubey",
     role: "Developer",
-    linkedin: "https://linkedin.com/in/developerthree",
+    linkedin: "https://www.linkedin.com/in/ashwani-dubey-3b2a81258/",
     image: "/placeholder-avatar.png",
   },
   {
-    name: "Developer Four",
+    name: "Aman Raj",
     role: "Developer",
-    linkedin: "https://linkedin.com/in/developerfour",
+    linkedin: "https://www.linkedin.com/in/aman-raj-328825280/",
     image: "/placeholder-avatar.png",
   },
 ];
@@ -86,7 +92,7 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
         className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
         </svg>
         <span>LinkedIn</span>
       </Link>
@@ -100,8 +106,9 @@ export default function Home() {
       <ChemistryBackground />
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="flex flex-col items-center justify-center min-h-screen px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="flex flex-col items-center justify-center min-h-screen px-4 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white/80"></div>
+          <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="text-5xl font-bold text-gray-900 mb-4">
               Welcome to <span className="text-primary-600">RankCatalyst</span>
             </h1>
@@ -129,8 +136,9 @@ export default function Home() {
         </section>
 
         {/* About Us Section */}
-        <section id="about" className="py-20 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
+        <section id="about" className="py-20 px-4 relative">
+          <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+          <div className="max-w-6xl mx-auto relative z-10">
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
               About Us
             </h2>
@@ -140,14 +148,14 @@ export default function Home() {
                   Our Mission
                 </h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  RankCatalyst is an innovative Intelligent Tutoring System designed specifically 
-                  for JEE Chemistry preparation. We combine cutting-edge technology with 
-                  educational expertise to provide a personalized learning experience that adapts 
+                  RankCatalyst is an innovative Intelligent Tutoring System designed specifically
+                  for JEE Chemistry preparation. We combine cutting-edge technology with
+                  educational expertise to provide a personalized learning experience that adapts
                   to each student's unique learning pace and style.
                 </p>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  Our platform leverages real-time attention tracking to monitor student engagement 
-                  and focus during quiz sessions. This allows us to provide immediate, personalized 
+                  Our platform leverages real-time attention tracking to monitor student engagement
+                  and focus during quiz sessions. This allows us to provide immediate, personalized
                   feedback and identify areas where students may need additional support.
                 </p>
               </div>
@@ -183,13 +191,14 @@ export default function Home() {
         </section>
 
         {/* Team Section */}
-        <section id="team" className="py-20 px-4 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
+        <section id="team" className="py-20 px-4 relative">
+          <div className="absolute inset-0 bg-gray-50/80 backdrop-blur-sm"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
               Our Team
             </h2>
             <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-              Meet the talented individuals behind RankCatalyst who are dedicated to revolutionizing 
+              Meet the talented individuals behind RankCatalyst who are dedicated to revolutionizing
               JEE Chemistry preparation through innovative technology.
             </p>
 
@@ -198,7 +207,7 @@ export default function Home() {
               <h3 className="text-3xl font-semibold text-center text-gray-900 mb-12">
                 Clients
               </h3>
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 {clients.map((client, index) => (
                   <TeamMemberCard key={index} member={client} />
                 ))}
