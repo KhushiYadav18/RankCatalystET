@@ -191,14 +191,16 @@ If you don't see the Environment Variables section during creation:
 
 ### 2.7 Run Migrations & Setup (FREE - No Shell Required!)
 
-**Option 1: Auto-Migrate on Startup (Easiest)**
+**Option 1: Update Build Command (Recommended - No Environment Variables Needed)**
 
-1. Go to **Render Dashboard** → Your service → **"Environment"** tab
-2. Add this environment variable:
-   - Key: `AUTO_MIGRATE`
-   - Value: `true`
+1. Go to **Render Dashboard** → Your service → **"Settings"** tab
+2. Find **"Build Command"** and update to:
+   ```bash
+   pip install -r requirements.txt && python manage.py migrate --noinput && python manage.py collectstatic --noinput
+   ```
 3. Click **"Save Changes"** - Render will redeploy
-4. Migrations will run automatically on startup!
+4. Migrations will run automatically during build!
+5. **After build completes**, use Option 2 to create superuser and load questions
 
 **Option 2: Setup via HTTP Endpoint (Recommended)**
 
@@ -232,13 +234,14 @@ If you don't see the Environment Variables section during creation:
    }).then(r => r.json()).then(console.log)
    ```
 
-**Option 3: Update Build Command (Alternative)**
+**Option 3: Use Setup Endpoint Only (Simplest)**
 
-Update your Build Command in Render to:
-```bash
-pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
-```
-This runs migrations during build (but can't create superuser or load questions).
+Skip auto-migration and just use the setup endpoint (Method 2) which handles everything:
+- Migrations
+- Superuser creation  
+- Question loading
+
+All in one call!
 
 **After Setup:**
 - Remove `SETUP_SECRET` or `AUTO_MIGRATE` from environment variables for security

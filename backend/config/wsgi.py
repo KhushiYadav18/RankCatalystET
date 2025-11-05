@@ -7,15 +7,11 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
-# Run migrations on startup if AUTO_MIGRATE is enabled
-if os.getenv('AUTO_MIGRATE', 'False').lower() == 'true':
-    try:
-        from django.core.management import call_command
-        print("Running migrations on startup...")
-        call_command('migrate', verbosity=0, interactive=False)
-        print("✓ Migrations completed")
-    except Exception as e:
-        print(f"⚠️ Migration error: {e}")
-
+# Get WSGI application
 application = get_wsgi_application()
+
+# Note: Migrations should be run via:
+# 1. Build command (recommended)
+# 2. Setup endpoint: /api/quizzes/setup/
+# Do NOT run migrations in wsgi.py as it causes 502 errors
 
