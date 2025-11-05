@@ -1,6 +1,7 @@
 """
 Views for Quiz app
 """
+import os
 from rest_framework import status, viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
@@ -250,4 +251,62 @@ def get_session_view(request, quiz_session_id):
     
     serializer = QuizSessionSerializer(session)
     return Response(serializer.data)
+
+
+@api_view(['POST'])
+@permission_classes([])  # No authentication required for setup
+def setup_view(request):
+    """
+    POST /api/quizzes/setup/
+    Run initial setup: migrations, create superuser, load questions
+    This is a free alternative to using Shell on Render
+    
+    Security: Only works if SETUP_SECRET is set and matches
+    """
+    from django.conf import settings
+    from django.core.management import call_command
+    from apps.users.models import User
+    
+    # Security check - only allow if SETUP_SECRET is set and matches
+    setup_secret = os.getenv('SETUP_SECRET', '')
+    provided_secret = request.data.get('secret', '')
+    
+    if not setup_secret or provided_secret != setup_secret:
+        return Response(
+            {'error': 'Invalid setup secret. Set SETUP_SECRET env var and provide it in request.'},
+            status=status.HTTP_403_FORBIDDEN
+        )
+    
+    results = {}
+    
+    # Run migrations
+    try:
+        call_command('migrate', verbosity=0, interactive=False)
+        results['migrations'] = 'success'
+    except Exception as e:
+        results['migrations'] = f'error: {str(e)}'
+    
+    # Create superuser if none exists
+    try:
+        if not User.objects.filter(is_superuser=True).exists():
+            email = request.data.get('admin_email', 'admin@rankcatalyst.com')
+            password = request.data.get('admin_password', 'admin123')
+            User.objects.create_superuser(email=email, password=password)
+            results['superuser'] = f'success: created {email}'
+        else:
+            results['superuser'] = 'skipped: superuser already exists'
+    except Exception as e:
+        results['superuser'] = f'error: {str(e)}'
+    
+    # Load questions
+    try:
+        call_command('load_questions', verbosity=0)
+        results['questions'] = 'success'
+    except Exception as e:
+        results['questions'] = f'error: {str(e)}'
+    
+    return Response({
+        'status': 'completed',
+        'results': results
+    })
 

@@ -109,31 +109,79 @@ postgresql://rankcatalyst_user:WRKHR4RhIte446PeJm6yFjFxQqa6azst@dpg-d45mrhf5r7bs
 
 ### 2.5 Add Environment Variables
 
-Click **"Advanced"** → **"Add Environment Variable"** and add:
+**During Service Creation:**
 
-```
-PYTHON_VERSION=3.11.0
-```
+1. Scroll down to the **"Environment Variables"** section (it's on the same page as Build Settings)
+2. Click **"Add Environment Variable"** button
+3. Add each variable one by one:
 
-Then click **"Environment"** tab and add:
+**Add these environment variables:**
 
-```
-OPENROUTER_API_KEY=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
-SECRET_KEY=<generate-a-secret-key>
-DEBUG=False
-ALLOWED_HOSTS=rankcatalyst-backend.onrender.com
-DJANGO_SETTINGS_MODULE=config.settings
-DATABASE_URL=<paste-internal-database-url-from-step-2.2>
-CORS_ALLOW_ALL_ORIGINS=False
-CORS_ALLOWED_ORIGINS=https://rankcatalyst.vercel.app,https://rankcatalyst-git-main.vercel.app
-SITE_URL=https://rankcatalyst.vercel.app
-SITE_NAME=RankCatalyst
-```
+1. **PYTHON_VERSION**
+   - Key: `PYTHON_VERSION`
+   - Value: `3.11.0`
+
+2. **OPENROUTER_API_KEY**
+   - Key: `OPENROUTER_API_KEY`
+   - Value: `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`
+
+3. **SECRET_KEY**
+   - Key: `SECRET_KEY`
+   - Value: `iceo!!-1+x03nskr(*uic%1xpf*&u_-+oa#vfnh(k*7x^ai&9%`
+   - (Or generate your own - see below)
+
+4. **DEBUG**
+   - Key: `DEBUG`
+   - Value: `False`
+
+5. **ALLOWED_HOSTS**
+   - Key: `ALLOWED_HOSTS`
+   - Value: `rankcatalystet.onrender.com` (or your actual service name)
+   - **Important:** Use your actual Render service URL (without https://)
+   - Example: If your URL is `https://rankcatalystet.onrender.com`, use `rankcatalystet.onrender.com`
+
+6. **DJANGO_SETTINGS_MODULE**
+   - Key: `DJANGO_SETTINGS_MODULE`
+   - Value: `config.settings`
+
+7. **DATABASE_URL**
+   - Key: `DATABASE_URL`
+   - Value: `postgresql://rankcatalyst_user:WRKHR4RhIte446PeJm6yFjFxQqa6azst@dpg-d45mrhf5r7bs73amareg-a/rankcatalyst`
+   - (Use the Internal Database URL from step 2.2)
+
+8. **CORS_ALLOW_ALL_ORIGINS**
+   - Key: `CORS_ALLOW_ALL_ORIGINS`
+   - Value: `False`
+
+9. **CORS_ALLOWED_ORIGINS**
+   - Key: `CORS_ALLOWED_ORIGINS`
+   - Value: `https://rankcatalyst.vercel.app,https://rankcatalyst-git-main.vercel.app`
+   - (Update this after you get your Vercel URL)
+
+10. **SITE_URL**
+    - Key: `SITE_URL`
+    - Value: `https://rankcatalyst.vercel.app`
+    - (Update after you get your Vercel URL)
+
+11. **SITE_NAME**
+    - Key: `SITE_NAME`
+    - Value: `RankCatalyst`
 
 **To generate SECRET_KEY, run:**
 ```bash
 python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 ```
+
+**Alternative: Add Environment Variables After Creation**
+
+If you don't see the Environment Variables section during creation:
+
+1. Complete the service creation first
+2. After the service is created, go to your service dashboard
+3. Click on **"Environment"** tab (in the left sidebar or top navigation)
+4. Click **"Add Environment Variable"** button
+5. Add each variable one by one
+6. Click **"Save Changes"** - Render will automatically redeploy
 
 ### 2.6 Deploy Backend
 
@@ -141,18 +189,60 @@ python -c "from django.core.management.utils import get_random_secret_key; print
 2. Wait for build (5-10 minutes)
 3. Your backend URL will be: `https://rankcatalyst-backend.onrender.com`
 
-### 2.7 Run Migrations & Setup
+### 2.7 Run Migrations & Setup (FREE - No Shell Required!)
 
-After deployment completes:
+**Option 1: Auto-Migrate on Startup (Easiest)**
 
-1. Go to **Render Dashboard** → Your service → **"Shell"** tab
-2. Run these commands:
+1. Go to **Render Dashboard** → Your service → **"Environment"** tab
+2. Add this environment variable:
+   - Key: `AUTO_MIGRATE`
+   - Value: `true`
+3. Click **"Save Changes"** - Render will redeploy
+4. Migrations will run automatically on startup!
 
+**Option 2: Setup via HTTP Endpoint (Recommended)**
+
+1. Go to **Render Dashboard** → Your service → **"Environment"** tab
+2. Add this environment variable:
+   - Key: `SETUP_SECRET`
+   - Value: `your-secret-password-here` (choose a strong password)
+3. Save changes and wait for redeploy
+4. Visit this URL in your browser (replace with your values):
+   ```
+   https://rankcatalystet.onrender.com/api/quizzes/setup/
+   ```
+5. Use a tool like Postman or curl to send POST request:
+   ```bash
+   curl -X POST https://rankcatalystet.onrender.com/api/quizzes/setup/ \
+     -H "Content-Type: application/json" \
+     -d '{"secret": "your-secret-password-here", "admin_email": "admin@rankcatalyst.com", "admin_password": "admin123"}'
+   ```
+   Or use this online tool: https://reqbin.com/curl
+   
+   **For Browser (use browser console):**
+   ```javascript
+   fetch('https://rankcatalystet.onrender.com/api/quizzes/setup/', {
+     method: 'POST',
+     headers: {'Content-Type': 'application/json'},
+     body: JSON.stringify({
+       secret: 'your-secret-password-here',
+       admin_email: 'admin@rankcatalyst.com',
+       admin_password: 'admin123'
+     })
+   }).then(r => r.json()).then(console.log)
+   ```
+
+**Option 3: Update Build Command (Alternative)**
+
+Update your Build Command in Render to:
 ```bash
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py load_questions
+pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
 ```
+This runs migrations during build (but can't create superuser or load questions).
+
+**After Setup:**
+- Remove `SETUP_SECRET` or `AUTO_MIGRATE` from environment variables for security
+- Or keep `AUTO_MIGRATE=true` if you want migrations to run on every deploy
 
 ---
 
