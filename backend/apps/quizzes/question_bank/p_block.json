@@ -1,0 +1,198 @@
+[
+  {
+    "external_id": "P1",
+    "text": "Which of the following elements in the p-block has the highest electronegativity?",
+    "options": [
+      "Boron",
+      "Nitrogen",
+      "Fluorine",
+      "Oxygen"
+    ],
+    "correct_option_index": 2,
+    "explanation": "Fluorine has the highest electronegativity (3.98) among p-block elements due to its small atomic size and high effective nuclear charge.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "P2",
+    "text": "What is the hybridization state of phosphorus in PCl5?",
+    "options": [
+      "sp",
+      "sp2",
+      "sp3",
+      "sp3d"
+    ],
+    "correct_option_index": 3,
+    "explanation": "Phosphorus in PCl5 has 5 electron pairs around it, requiring sp3d hybridization to accommodate the trigonal bipyramidal geometry.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "P3",
+    "text": "Which of the following statements about the anomalous behavior of nitrogen is correct?",
+    "options": [
+      "Nitrogen forms stable pentafluoride due to its larger size",
+      "Nitrogen cannot form dπ-pπ bonds due to absence of d-orbitals",
+      "Nitrogen forms multiple bonds easily compared to other group 15 elements",
+      "Nitrogen has lower bond dissociation energy than phosphorus"
+    ],
+    "correct_option_index": 2,
+    "explanation": "Nitrogen can form multiple bonds (N≡N) easily due to its small size and high electronegativity, unlike heavier group 15 elements.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "P4",
+    "text": "The most stable oxidation state of lead is:",
+    "options": [
+      "+2",
+      "+4",
+      "+6",
+      "+3"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Lead shows +2 oxidation state most commonly due to the inert pair effect, where ns2 electrons remain unshared.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "P5",
+    "text": "Which element in group 14 has the highest melting point?",
+    "options": [
+      "Carbon (diamond)",
+      "Silicon",
+      "Germanium",
+      "Tin"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Carbon in diamond form has the highest melting point due to its strong covalent network structure.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "P6",
+    "text": "What is the structure of XeF6?",
+    "options": [
+      "Octahedral",
+      "Pentagonal bipyramidal",
+      "Distorted octahedral",
+      "Square pyramidal"
+    ],
+    "correct_option_index": 2,
+    "explanation": "XeF6 has a distorted octahedral structure due to the presence of a lone pair of electrons on xenon.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "P7",
+    "text": "Which of the following is the strongest acid among group 16 hydrides?",
+    "options": [
+      "H2O",
+      "H2S",
+      "H2Se",
+      "H2Te"
+    ],
+    "correct_option_index": 3,
+    "explanation": "H2Te is the strongest acid due to decreasing bond dissociation energy down the group, making H+ removal easier.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "P8",
+    "text": "The bond angle in H2O is approximately:",
+    "options": [
+      "90°",
+      "104.5°",
+      "109.5°",
+      "120°"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Water has a bent structure with a bond angle of 104.5° due to the repulsion from two lone pairs on oxygen.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "P9",
+    "text": "Which of the following p-block compounds shows maximum catenation?",
+    "options": [
+      "Carbon compounds",
+      "Silicon compounds",
+      "Nitrogen compounds",
+      "Phosphorus compounds"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Carbon shows maximum catenation due to its ability to form strong C-C bonds, leading to vast organic chemistry.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "P10",
+    "text": "The correct order of bond angles in NF3, PF3, and AsF3 is:",
+    "options": [
+      "NF3 > PF3 > AsF3",
+      "PF3 > NF3 > AsF3",
+      "AsF3 > PF3 > NF3",
+      "NF3 = PF3 = AsF3"
+    ],
+    "correct_option_index": 2,
+    "explanation": "Bond angle increases down the group due to decreasing electronegativity and reduced lone pair-bond pair repulsion.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "P11",
+    "text": "Which p-block element forms the most stable +3 oxidation state?",
+    "options": [
+      "Boron",
+      "Aluminum",
+      "Gallium",
+      "Indium"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Aluminum shows the most stable +3 oxidation state due to its position in the group and favorable ionization energies.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "P12",
+    "text": "The correct order of thermal stability for group 16 hydrides is:",
+    "options": [
+      "H2O > H2S > H2Se > H2Te",
+      "H2Te > H2Se > H2S > H2O",
+      "H2S > H2O > H2Se > H2Te",
+      "All are equally stable"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Thermal stability decreases down the group due to decreasing bond dissociation energy as atomic size increases.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "P13",
+    "text": "Which of the following is not a characteristic of p-block elements?",
+    "options": [
+      "Variable oxidation states",
+      "Formation of covalent compounds",
+      "Metallic character increases down the group",
+      "All have d-orbitals in valence shell"
+    ],
+    "correct_option_index": 3,
+    "explanation": "P-block elements have p-orbitals in their valence shell, not d-orbitals. Only some can utilize d-orbitals for expansion.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "P14",
+    "text": "The compound that does not exist is:",
+    "options": [
+      "NF5",
+      "PF5",
+      "AsF5",
+      "SbF5"
+    ],
+    "correct_option_index": 0,
+    "explanation": "NF5 does not exist because nitrogen cannot expand its octet due to absence of d-orbitals, unlike other group 15 elements.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "P15",
+    "text": "Which p-block oxide is amphoteric?",
+    "options": [
+      "Al2O3",
+      "SO2",
+      "Cl2O7",
+      "N2O5"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Al2O3 is amphoteric as it reacts with both acids and bases, showing properties of both metal and non-metal oxides.",
+    "difficulty": "medium"
+  }
+]
+

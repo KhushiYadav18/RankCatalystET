@@ -1,0 +1,198 @@
+[
+  {
+    "external_id": "G1",
+    "text": "According to ideal gas law, PV = nRT, what does R represent?",
+    "options": [
+      "Real gas constant",
+      "Universal gas constant",
+      "Relative constant",
+      "Rate constant"
+    ],
+    "correct_option_index": 1,
+    "explanation": "R is the universal gas constant, equal to 8.314 J/(mol·K) or 0.0821 L·atm/(mol·K).",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "G2",
+    "text": "At constant temperature, if pressure of a gas is doubled, volume:",
+    "options": [
+      "Doubles",
+      "Halves",
+      "Remains same",
+      "Quadruples"
+    ],
+    "correct_option_index": 1,
+    "explanation": "According to Boyle's law, at constant temperature, pressure and volume are inversely proportional: P ∝ 1/V.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "G3",
+    "text": "The van der Waals equation accounts for:",
+    "options": [
+      "Ideal gas behavior only",
+      "Molecular size and intermolecular forces",
+      "Temperature effects only",
+      "Pressure effects only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "The van der Waals equation (P + a(n/V)²)(V - nb) = nRT accounts for molecular volume (b) and intermolecular attractions (a).",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "G4",
+    "text": "What is the root mean square speed of a gas molecule?",
+    "options": [
+      "vrms = √(3RT/M)",
+      "vrms = √(2RT/M)",
+      "vrms = RT/M",
+      "vrms = 3RT/M"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The root mean square speed is given by vrms = √(3RT/M), where M is the molar mass.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "G5",
+    "text": "According to Graham's law of effusion, the rate of effusion is:",
+    "options": [
+      "Directly proportional to molecular mass",
+      "Inversely proportional to square root of molecular mass",
+      "Directly proportional to square root of molecular mass",
+      "Independent of molecular mass"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Graham's law states: rate ∝ 1/√M, meaning lighter molecules effuse faster than heavier ones.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "G6",
+    "text": "The critical temperature of a gas is:",
+    "options": [
+      "The temperature above which it cannot be liquefied",
+      "The temperature below which it cannot be liquefied",
+      "The temperature at which it becomes solid",
+      "The temperature at which it becomes ideal"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Critical temperature is the highest temperature at which a gas can be liquefied by pressure alone.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "G7",
+    "text": "At STP, one mole of any ideal gas occupies:",
+    "options": [
+      "22.4 L",
+      "24.0 L",
+      "20.0 L",
+      "25.0 L"
+    ],
+    "correct_option_index": 0,
+    "explanation": "At standard temperature and pressure (0°C, 1 atm), one mole of ideal gas occupies 22.4 liters.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "G8",
+    "text": "The compressibility factor Z for an ideal gas is:",
+    "options": [
+      "0",
+      "1",
+      "> 1",
+      "< 1"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Z = PV/(nRT). For an ideal gas, Z = 1. For real gases, Z deviates from 1 due to molecular interactions.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "G9",
+    "text": "Which gas law combines Boyle's, Charles', and Avogadro's laws?",
+    "options": [
+      "Ideal gas law",
+      "Dalton's law",
+      "Graham's law",
+      "Henry's law"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The ideal gas law PV = nRT combines all three: Boyle's (P-V), Charles' (V-T), and Avogadro's (V-n) relationships.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "G10",
+    "text": "The Maxwell-Boltzmann distribution describes:",
+    "options": [
+      "Pressure distribution",
+      "Speed distribution of gas molecules",
+      "Volume distribution",
+      "Temperature distribution"
+    ],
+    "correct_option_index": 1,
+    "explanation": "The Maxwell-Boltzmann distribution gives the probability distribution of molecular speeds in a gas at thermal equilibrium.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "G11",
+    "text": "According to Dalton's law of partial pressures:",
+    "options": [
+      "Each gas has its own pressure",
+      "Total pressure equals sum of partial pressures",
+      "Partial pressure depends on volume",
+      "All gases have equal partial pressure"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Dalton's law states that the total pressure of a gas mixture equals the sum of partial pressures of component gases.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "G12",
+    "text": "The most probable speed of a gas molecule is:",
+    "options": [
+      "vmp = √(2RT/M)",
+      "vmp = √(3RT/M)",
+      "vmp = √(RT/M)",
+      "vmp = 2RT/M"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The most probable speed (peak of Maxwell-Boltzmann distribution) is vmp = √(2RT/M).",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "G13",
+    "text": "Real gases behave ideally at:",
+    "options": [
+      "Low temperature and high pressure",
+      "High temperature and low pressure",
+      "Low temperature and low pressure",
+      "High temperature and high pressure"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Real gases approach ideal behavior at high temperature (low intermolecular interactions) and low pressure (large volume, low molecular interactions).",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "G14",
+    "text": "The average kinetic energy of gas molecules depends on:",
+    "options": [
+      "Pressure only",
+      "Temperature only",
+      "Volume only",
+      "All of the above"
+    ],
+    "correct_option_index": 1,
+    "explanation": "For ideal gases, average kinetic energy = (3/2)kT, which depends only on temperature, not on pressure or volume.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "G15",
+    "text": "The coefficient of volume expansion for an ideal gas at constant pressure is:",
+    "options": [
+      "1/273 per °C",
+      "1/273 per K",
+      "273 per °C",
+      "273 per K"
+    ],
+    "correct_option_index": 0,
+    "explanation": "According to Charles' law, volume increases by 1/273 of its value at 0°C for each degree Celsius rise in temperature.",
+    "difficulty": "hard"
+  }
+]
+

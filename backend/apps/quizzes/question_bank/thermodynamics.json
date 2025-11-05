@@ -1,0 +1,198 @@
+[
+  {
+    "external_id": "T1",
+    "text": "The first law of thermodynamics states that:",
+    "options": [
+      "Energy cannot be created or destroyed",
+      "Entropy always increases",
+      "Heat flows from hot to cold",
+      "All processes are reversible"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The first law of thermodynamics is a statement of energy conservation: energy cannot be created or destroyed, only transferred or converted.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "T2",
+    "text": "What is the standard enthalpy of formation of an element in its standard state?",
+    "options": [
+      "Zero",
+      "Positive",
+      "Negative",
+      "Cannot be determined"
+    ],
+    "correct_option_index": 0,
+    "explanation": "By definition, the standard enthalpy of formation of an element in its standard state is zero, as it serves as the reference point.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "T3",
+    "text": "For a spontaneous process at constant temperature and pressure, which of the following must be true?",
+    "options": [
+      "ΔG < 0",
+      "ΔH < 0",
+      "ΔS < 0",
+      "ΔU < 0"
+    ],
+    "correct_option_index": 0,
+    "explanation": "For a spontaneous process at constant T and P, the Gibbs free energy change (ΔG) must be negative.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "T4",
+    "text": "The relationship between ΔG, ΔH, and ΔS is given by:",
+    "options": [
+      "ΔG = ΔH - TΔS",
+      "ΔG = ΔH + TΔS",
+      "ΔG = ΔH / TΔS",
+      "ΔG = ΔH × TΔS"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The Gibbs free energy equation is ΔG = ΔH - TΔS, relating enthalpy, entropy, and temperature effects.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "T5",
+    "text": "Which process has the highest entropy?",
+    "options": [
+      "Solid ice",
+      "Liquid water",
+      "Water vapor",
+      "Supercritical water"
+    ],
+    "correct_option_index": 3,
+    "explanation": "Entropy increases with the degree of freedom and disorder. Supercritical water has the highest entropy due to maximum molecular motion.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "T6",
+    "text": "The heat capacity at constant volume (Cv) is related to internal energy by:",
+    "options": [
+      "Cv = (∂U/∂T)v",
+      "Cv = (∂H/∂T)v",
+      "Cv = (∂U/∂P)v",
+      "Cv = (∂S/∂T)v"
+    ],
+    "correct_option_index": 0,
+    "explanation": "At constant volume, Cv is the partial derivative of internal energy with respect to temperature: Cv = (∂U/∂T)v.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "T7",
+    "text": "For an isothermal expansion of an ideal gas, which is zero?",
+    "options": [
+      "ΔU",
+      "ΔH",
+      "q",
+      "w"
+    ],
+    "correct_option_index": 0,
+    "explanation": "For an ideal gas, internal energy depends only on temperature. In an isothermal process, ΔU = 0.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "T8",
+    "text": "The third law of thermodynamics states that:",
+    "options": [
+      "Energy is conserved",
+      "Entropy approaches zero as temperature approaches absolute zero",
+      "Heat cannot be completely converted to work",
+      "All spontaneous processes increase entropy"
+    ],
+    "correct_option_index": 1,
+    "explanation": "The third law states that the entropy of a perfect crystal approaches zero as temperature approaches absolute zero.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "T9",
+    "text": "Which statement about reversible processes is correct?",
+    "options": [
+      "They occur infinitely fast",
+      "They maximize work output",
+      "They have zero entropy change",
+      "They can be reversed by an infinitesimal change"
+    ],
+    "correct_option_index": 3,
+    "explanation": "A reversible process can be reversed by an infinitesimal change in conditions, representing an idealized process.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "T10",
+    "text": "The standard state for thermodynamic calculations is:",
+    "options": [
+      "0°C and 1 atm",
+      "25°C and 1 bar",
+      "0 K and 1 atm",
+      "25°C and 1 atm"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Standard state is defined as 25°C (298 K) and 1 bar pressure for thermodynamic calculations.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "T11",
+    "text": "For an adiabatic process, which is true?",
+    "options": [
+      "q = 0",
+      "ΔT = 0",
+      "ΔS = 0",
+      "w = 0"
+    ],
+    "correct_option_index": 0,
+    "explanation": "By definition, an adiabatic process has no heat exchange with surroundings, so q = 0.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "T12",
+    "text": "The relationship between Cp and Cv for an ideal gas is:",
+    "options": [
+      "Cp = Cv + R",
+      "Cp = Cv - R",
+      "Cp = Cv × R",
+      "Cp = Cv / R"
+    ],
+    "correct_option_index": 0,
+    "explanation": "For an ideal gas, Cp = Cv + R, where R is the gas constant. This accounts for work done during expansion at constant pressure.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "T13",
+    "text": "Which has the highest bond dissociation energy?",
+    "options": [
+      "H-H",
+      "F-F",
+      "Cl-Cl",
+      "Br-Br"
+    ],
+    "correct_option_index": 0,
+    "explanation": "H-H has the highest bond dissociation energy (436 kJ/mol) due to the small size and strong overlap of hydrogen atoms.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "T14",
+    "text": "The entropy change for vaporization of water at 100°C is:",
+    "options": [
+      "Positive",
+      "Negative",
+      "Zero",
+      "Cannot be determined"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Vaporization increases disorder, so entropy change is positive (ΔS > 0).",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "T15",
+    "text": "For a reaction with ΔH < 0 and ΔS < 0, the reaction is spontaneous when:",
+    "options": [
+      "At all temperatures",
+      "At low temperatures",
+      "At high temperatures",
+      "Never spontaneous"
+    ],
+    "correct_option_index": 1,
+    "explanation": "When both ΔH and ΔS are negative, ΔG = ΔH - TΔS. The reaction is spontaneous (ΔG < 0) when |TΔS| < |ΔH|, i.e., at low temperatures.",
+    "difficulty": "hard"
+  }
+]
+

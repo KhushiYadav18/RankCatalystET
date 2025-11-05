@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #000000;
+  background: #ffffff;
+}
+
+/* Style WebGazer video elements - make them small and positioned */
+video[style*="position: fixed"],
+video[style*="position: absolute"] {
+  position: fixed !important;
+  top: 80px !important;
+  left: 20px !important;
+  width: 120px !important;
+  height: 90px !important;
+  z-index: 1000 !important;
+  border: 2px solid #0ea5e9 !important;
+  border-radius: 8px !important;
+  opacity: 0.8 !important;
+  pointer-events: none !important;
+}
+
+/* Hide WebGazer debug overlays but keep video */
+.webgazerFaceOverlay {
+  display: none !important;
+}
+

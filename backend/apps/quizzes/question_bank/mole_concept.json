@@ -1,0 +1,198 @@
+[
+  {
+    "external_id": "M1",
+    "text": "What is the value of Avogadro's number?",
+    "options": [
+      "6.022 × 10²²",
+      "6.022 × 10²³",
+      "6.022 × 10²⁴",
+      "6.022 × 10²⁵"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Avogadro's number is 6.022 × 10²³, representing the number of particles in one mole of a substance.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "M2",
+    "text": "The number of moles in 44 g of CO2 is:",
+    "options": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Molar mass of CO2 = 12 + 32 = 44 g/mol. Number of moles = 44 g / 44 g/mol = 1 mole.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "M3",
+    "text": "What is the mass of one atom of carbon-12?",
+    "options": [
+      "12 g",
+      "12 amu",
+      "1.99 × 10⁻²³ g",
+      "6.022 × 10²³ g"
+    ],
+    "correct_option_index": 2,
+    "explanation": "Mass of one atom = atomic mass / Avogadro's number = 12 g / (6.022 × 10²³) = 1.99 × 10⁻²³ g.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "M4",
+    "text": "The number of atoms in 0.5 mole of oxygen gas (O2) is:",
+    "options": [
+      "3.011 × 10²³",
+      "6.022 × 10²³",
+      "1.204 × 10²⁴",
+      "6.022 × 10²²"
+    ],
+    "correct_option_index": 1,
+    "explanation": "0.5 mole of O2 contains 0.5 × 6.022 × 10²³ = 3.011 × 10²³ molecules. Each O2 has 2 atoms, so total atoms = 2 × 3.011 × 10²³ = 6.022 × 10²³.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "M5",
+    "text": "What is the empirical formula of a compound with 40% carbon and 60% oxygen by mass?",
+    "options": [
+      "CO",
+      "CO2",
+      "C2O",
+      "C3O2"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Assume 100g: C = 40g (40/12 = 3.33 mol), O = 60g (60/16 = 3.75 mol). Ratio ≈ 1:1, so empirical formula is CO.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "M6",
+    "text": "The volume occupied by 2 moles of an ideal gas at STP is:",
+    "options": [
+      "11.2 L",
+      "22.4 L",
+      "44.8 L",
+      "67.2 L"
+    ],
+    "correct_option_index": 2,
+    "explanation": "At STP, 1 mole occupies 22.4 L. Therefore, 2 moles occupy 2 × 22.4 = 44.8 L.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "M7",
+    "text": "What is the number of molecules in 18 g of water?",
+    "options": [
+      "6.022 × 10²²",
+      "6.022 × 10²³",
+      "1.204 × 10²⁴",
+      "3.011 × 10²³"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Molar mass of H2O = 18 g/mol. 18 g = 1 mole = 6.022 × 10²³ molecules.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "M8",
+    "text": "The equivalent weight of H2SO4 in the reaction: H2SO4 + 2NaOH → Na2SO4 + 2H2O is:",
+    "options": [
+      "49",
+      "98",
+      "147",
+      "196"
+    ],
+    "correct_option_index": 0,
+    "explanation": "H2SO4 has 2 replaceable H+ ions. Equivalent weight = molecular weight / 2 = 98 / 2 = 49.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "M9",
+    "text": "What is the percentage composition of oxygen in CaCO3?",
+    "options": [
+      "48%",
+      "40%",
+      "32%",
+      "16%"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Molar mass of CaCO3 = 100 g/mol. Mass of O = 48 g. Percentage = (48/100) × 100 = 48%.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "M10",
+    "text": "The number of moles of electrons in 1 mole of electrons is:",
+    "options": [
+      "1",
+      "6.022 × 10²³",
+      "1/6.022 × 10²³",
+      "Cannot be determined"
+    ],
+    "correct_option_index": 0,
+    "explanation": "1 mole of electrons contains 1 mole of electrons, which is 6.022 × 10²³ electrons, but the number of moles is 1.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "M11",
+    "text": "What is the molarity of a solution containing 0.5 moles of solute in 250 mL of solution?",
+    "options": [
+      "0.5 M",
+      "1.0 M",
+      "2.0 M",
+      "4.0 M"
+    ],
+    "correct_option_index": 2,
+    "explanation": "Molarity = moles / volume in L = 0.5 mol / 0.25 L = 2.0 M.",
+    "difficulty": "medium"
+  },
+  {
+    "external_id": "M12",
+    "text": "The limiting reactant in a chemical reaction is:",
+    "options": [
+      "The reactant with smallest mass",
+      "The reactant that produces least amount of product",
+      "The reactant that is completely consumed",
+      "The reactant with highest molecular weight"
+    ],
+    "correct_option_index": 2,
+    "explanation": "The limiting reactant is the one that is completely consumed first, limiting the amount of product formed.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "M13",
+    "text": "What is the number of atoms in 56 g of Fe?",
+    "options": [
+      "6.022 × 10²³",
+      "3.011 × 10²³",
+      "1.204 × 10²⁴",
+      "2.408 × 10²⁴"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Molar mass of Fe = 56 g/mol. 56 g = 1 mole = 6.022 × 10²³ atoms.",
+    "difficulty": "easy"
+  },
+  {
+    "external_id": "M14",
+    "text": "The molecular formula of a compound with empirical formula CH2O and molecular mass 180 g/mol is:",
+    "options": [
+      "CH2O",
+      "C2H4O2",
+      "C6H12O6",
+      "C9H18O9"
+    ],
+    "correct_option_index": 2,
+    "explanation": "Empirical mass = 30 g/mol. n = 180/30 = 6. Molecular formula = (CH2O)6 = C6H12O6.",
+    "difficulty": "hard"
+  },
+  {
+    "external_id": "M15",
+    "text": "What is the normality of 0.5 M H3PO4 solution?",
+    "options": [
+      "0.5 N",
+      "1.0 N",
+      "1.5 N",
+      "2.0 N"
+    ],
+    "correct_option_index": 2,
+    "explanation": "H3PO4 has 3 replaceable H+ ions. Normality = Molarity × acidity = 0.5 × 3 = 1.5 N.",
+    "difficulty": "hard"
+  }
+]
+
