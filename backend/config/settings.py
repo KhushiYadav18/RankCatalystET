@@ -133,6 +133,28 @@ CORS_ALLOW_ALL_ORIGINS = config_module.CORS_ALLOW_ALL_ORIGINS
 CORS_ALLOWED_ORIGINS = config_module.CORS_ALLOWED_ORIGINS
 CORS_ALLOW_CREDENTIALS = True
 
+# CORS Method and Header Settings
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
 # OpenRouter Configuration (for LLM)
 OPENROUTER_API_KEY = config_module.OPENROUTER_API_KEY
 OPENROUTER_BASE_URL = config_module.OPENROUTER_BASE_URL

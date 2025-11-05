@@ -46,7 +46,7 @@ if allowed_hosts_str:
     ALLOWED_HOSTS = [host.strip() for host in allowed_hosts_str.split(",") if host.strip()]
 else:
     # Default for development
-    ALLOWED_HOSTS = ["localhost", "127.0.0.1","rankcatalystet.onrender.com"]
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1","rankcatalystetet.onrender.com"]
 
 # Site Info for OpenRouter
 SITE_URL = os.getenv("SITE_URL", "http://localhost:3000")  # Frontend URL
