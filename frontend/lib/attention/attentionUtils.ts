@@ -53,6 +53,14 @@ export function computeAttentionMetrics(
       return;
     }
 
+    // TypeScript guard: we know x and y are not null here because we returned early if isOffScreen
+    if (sample.x === null || sample.y === null) {
+      // This shouldn't happen due to early return, but TypeScript needs this
+      numOffTask++;
+      trace.push({ t_ms: sample.timestamp - (samples[0]?.timestamp || 0), on_task: false });
+      return;
+    }
+
     // Check if sample is within question box bounds
     // STRICT: No padding - only samples directly on question area count
     // This makes attention metrics more accurate and responsive

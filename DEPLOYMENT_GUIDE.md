@@ -134,10 +134,10 @@ postgresql://rankcatalyst_user:WRKHR4RhIte446PeJm6yFjFxQqa6azst@dpg-d45mrhf5r7bs
    - Key: `DEBUG`
    - Value: `False`
 
-5. **ALLOWED_HOSTS**
+5. **ALLOWED_HOSTS** ⚠️ **CRITICAL - Fixes 400 Errors!**
    - Key: `ALLOWED_HOSTS`
-   - Value: `rankcatalystet.onrender.com` (or your actual service name)
-   - **Important:** Use your actual Render service URL (without https://)
+   - Value: `rankcatalystet.onrender.com` (your exact Render service URL, no https://)
+   - **This MUST be set correctly or you'll get 400 Bad Request errors!**
    - Example: If your URL is `https://rankcatalystet.onrender.com`, use `rankcatalystet.onrender.com`
 
 6. **DJANGO_SETTINGS_MODULE**
@@ -180,8 +180,11 @@ If you don't see the Environment Variables section during creation:
 2. After the service is created, go to your service dashboard
 3. Click on **"Environment"** tab (in the left sidebar or top navigation)
 4. Click **"Add Environment Variable"** button
-5. Add each variable one by one
-6. Click **"Save Changes"** - Render will automatically redeploy
+5. **⚠️ FIRST: Add ALLOWED_HOSTS** (required to fix 400 errors):
+   - Key: `ALLOWED_HOSTS`
+   - Value: `rankcatalystet.onrender.com` (your service URL)
+6. Add other variables one by one
+7. Click **"Save Changes"** - Render will automatically redeploy
 
 ### 2.6 Deploy Backend
 

@@ -38,7 +38,15 @@ OPENROUTER_MODEL = "openai/gpt-4o-mini"
 # Read from environment variables for production, fallback to defaults for development
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-rankcatalyst-dev-key-change-in-production-2024")
 DEBUG = os.getenv("DEBUG", "True").lower() == "true"
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+
+# ALLOWED_HOSTS - Handle both comma-separated string and list
+allowed_hosts_str = os.getenv("ALLOWED_HOSTS", "")
+if allowed_hosts_str:
+    # Split by comma and strip whitespace
+    ALLOWED_HOSTS = [host.strip() for host in allowed_hosts_str.split(",") if host.strip()]
+else:
+    # Default for development
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Site Info for OpenRouter
 SITE_URL = os.getenv("SITE_URL", "http://localhost:3000")  # Frontend URL
