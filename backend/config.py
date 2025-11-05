@@ -13,8 +13,18 @@ BASE_DIR = Path(__file__).resolve().parent
 # Load environment variables from .env file
 env_path = BASE_DIR / '.env'
 if env_path.exists():
-    load_dotenv(env_path)
-    print(f"Loaded .env file from {env_path}")
+    try:
+        load_dotenv(env_path, encoding='utf-8')
+    except UnicodeDecodeError:
+        # If encoding fails, try to read manually
+        try:
+            with open(env_path, 'r', encoding='utf-8-sig') as f:
+                for line in f:
+                    if '=' in line and not line.strip().startswith('#'):
+                        key, value = line.strip().split('=', 1)
+                        os.environ[key] = value
+        except Exception:
+            print(f"Warning: Could not load .env file from {env_path}")
 else:
     print(f"Warning: .env file not found at {env_path}")
 
