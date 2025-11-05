@@ -4,13 +4,23 @@ Contains all environment variables and settings that would normally be in .env
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # config.py is in backend/, so parent.parent gets us to backend/
 BASE_DIR = Path(__file__).resolve().parent
 
+# Load environment variables from .env file
+env_path = BASE_DIR / '.env'
+if env_path.exists():
+    load_dotenv(env_path)
+    print(f"Loaded .env file from {env_path}")
+else:
+    print(f"Warning: .env file not found at {env_path}")
+
 # OpenRouter API Configuration
-OPENROUTER_API_KEY = "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"  # Replace with actual key
+# Read API key from .env file, fallback to empty string if not found
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 OPENROUTER_MODEL = "openai/gpt-4o-mini"
 
